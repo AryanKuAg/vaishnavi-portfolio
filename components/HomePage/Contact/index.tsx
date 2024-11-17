@@ -1,6 +1,45 @@
 'use client'
 
+import React, { useState } from 'react'
+
 export default function ContactMe() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    message: '',
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prevData) => ({ ...prevData, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const { firstName, lastName, email, phoneNumber, message } = formData
+
+    // Format email body
+    const emailBody = `
+Hello,
+
+Here is the contact form submission:
+
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phoneNumber}
+
+Message:
+${message}
+
+Regards,
+${firstName} ${lastName}
+`
+
+    // Open default email client
+    window.location.href = `mailto:guptavaishnavi8032@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`
+  }
 
   return (
     <div className="isolate bg-white px-8">
@@ -20,7 +59,7 @@ export default function ContactMe() {
         <h1 className="font-semibold tracking-tight text-gray-900 text-5xl sm:text-6xl">📱 Contact me</h1>
         <p className="mt-2 text-lg/8 text-gray-600">Have questions or need assistance? Feel free to reach out—I&apos;m here to help!</p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
@@ -29,9 +68,11 @@ export default function ContactMe() {
             <div className="mt-2.5">
               <input
                 id="first-name"
-                name="first-name"
+                name="firstName"
                 type="text"
                 autoComplete="given-name"
+                value={formData.firstName}
+                onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
               />
             </div>
@@ -43,9 +84,11 @@ export default function ContactMe() {
             <div className="mt-2.5">
               <input
                 id="last-name"
-                name="last-name"
+                name="lastName"
                 type="text"
                 autoComplete="family-name"
+                value={formData.lastName}
+                onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
               />
             </div>
@@ -60,6 +103,8 @@ export default function ContactMe() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
               />
             </div>
@@ -68,29 +113,15 @@ export default function ContactMe() {
             <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-gray-900">
               Phone number
             </label>
-            <div className="relative mt-2.5">
-              <div className="absolute inset-y-0 left-0 flex items-center">
-                <label htmlFor="country" className="sr-only">
-                  Country
-                </label>
-                <select
-                  id="country"
-                  name="country"
-                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-4 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                >
-                  <option>IN</option>
-                </select>
-                {/* <FaAngleDown
-                  aria-hidden="true"
-                  className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                /> */}
-              </div>
+            <div className="mt-2.5">
               <input
                 id="phone-number"
-                name="phone-number"
+                name="phoneNumber"
                 type="tel"
                 autoComplete="tel"
-                className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
               />
             </div>
           </div>
@@ -103,12 +134,12 @@ export default function ContactMe() {
                 id="message"
                 name="message"
                 rows={4}
+                value={formData.message}
+                onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
-                defaultValue={''}
               />
             </div>
           </div>
-        
         </div>
         <div className="mt-10">
           <button
@@ -122,3 +153,4 @@ export default function ContactMe() {
     </div>
   )
 }
+
