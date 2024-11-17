@@ -7,10 +7,10 @@ import Link from 'next/link'
 import { FaBarsStaggered , FaXmark} from "react-icons/fa6";
 
 const navigation = [
-    { name: 'Home', href: '#' },
+    // { name: 'Home', href: '#' },
     { name: 'Experience', href: '#experience' },
   { name: 'Certificate', href: '#certificates' },
-  { name: 'Testimonials', href: '#' },
+  // { name: 'Testimonials', href: '#' },
   { name: 'Contact me', href: '#contactme' },
 ]
 
@@ -18,7 +18,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
+    <header className="bg-white top-0 sticky z-50">
       <nav aria-label="Global" className="mx-auto flex items-center justify-between p-6 lg:px-8">
         <Link href="/" >
           <Image
