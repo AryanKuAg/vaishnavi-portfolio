@@ -15,7 +15,11 @@ function classNames(...classes: string[]) {
 
 export default function Certificates() {
   return (
-    <div className='my-32'><h1 className='text-5xl sm:text-6xl text-center'>Certificates</h1>
+    <div className='mt-32 mb-20'>
+        <div className="mx-auto max-w-2xl text-center">
+        <h1 className="font-semibold tracking-tight text-gray-900 text-5xl sm:text-6xl">📜 Certificates</h1>
+        <p className="mt-2 text-lg/8 text-gray-600">Browse through my academic certificates that reflect my commitment to learning and excellence.</p>
+      </div>
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-8 gap-4 my-8'>
         {images.map(i => <Image className={classNames(i.iconBackground, "rounded-2xl border-8")} key={i.id} alt={i.path} height={1046} width={748} src={i.path}/>)}
     </div>

@@ -89,9 +89,9 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-t-gray-100 rounded-2xl">
-      <div className="mx-auto px-6 pb-8 pt-16 lg:px-8 ">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+    <footer className="bg-white border-t border-t-gray-100 rounded-2xl mt-20">
+      <div className="mx-auto px-6 py-8 lg:px-8 ">
+        <div className="flex justify-between">
           <div className="space-y-8">
             <Image
                alt="Vaishnavi Logo"
@@ -102,7 +102,9 @@ export default function Footer() {
             <p className="text-balance text-sm/6 text-gray-600">
               Vaishnavi&apos;s Portfolio 🌼
             </p>
-            <div className="flex gap-x-6 pb-8 sm:pb-0">
+            
+          </div>
+          <div className="flex gap-x-6 sm:pb-0 pt-3">
               {navigation.social.map((item) => (
                 <a
                   key={item.name}
@@ -114,81 +116,8 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
-          <div className="grid grid-cols-2 gap-8 xl:col-span-2 ">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Solutions
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Support
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Extras
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.extras.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
-        <div className="mt-12 border-t border-gray-900/10 pt-8 sm:flex items-center justify-between">
+        <div className="mt-6 border-t border-gray-900/10 pt-8 sm:flex items-center justify-between">
           <p className="text-sm text-gray-600">
             &copy; 2024 Vaishnavi&apos;s Classes, Inc. All rights reserved.
           </p>
