@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 const timeline = [
     {
       id: 1,
-      content: 'helped her excel in mathematics and improve her overall academic performance through personalized tutoring.',
+      content: 'helped her in SST and English. Also improve her overall academic performance through personalized tutoring.',
       target: 'Worked closely with Rani Smita Bharti,',
       href: '#',
       date: '2020 - 2022',
@@ -14,7 +14,7 @@ const timeline = [
     },
     {
       id: 2,
-      content: 'provided guidance in science and social studies, ensuring they grasped key concepts and excelled in their exams.',
+      content: 'provided guidance in SST and English, ensuring they grasped key concepts and excelled in their exams.',
       target: 'Collaborated with Abhinav Kumar,',
       href: '#',
       date: '2021 - 2023',
@@ -24,7 +24,7 @@ const timeline = [
     },
     {
       id: 3,
-      content: 'offered dedicated support in English and history, helping her develop confidence and a better understanding of the subjects.',
+      content: 'offered dedicated support in English and SST, helping her develop confidence and a better understanding of the subjects.',
       target: 'Mentored Rishu Kumar,',
       href: '#',
       date: '2022 - 2023',
@@ -34,7 +34,7 @@ const timeline = [
     },
     {
       id: 4,
-      content: 'focused on strengthening her problem-solving skills in mathematics and preparing her for competitive exams.',
+      content: 'provided guidance in SST and English.',
       target: 'Provided structured lessons to Mauli Kumari,',
       href: '#',
       date: '2023 - 2024',
