@@ -100,9 +100,9 @@ export default function Footer() {
                height={50}
             />
             <p className="text-balance text-sm/6 text-gray-600">
-              Official Website of ISKCON Ramgarh 🌼
+              Vaishnavi&apos;s Portfolio 🌼
             </p>
-            <div className="flex gap-x-6">
+            <div className="flex gap-x-6 pb-8 sm:pb-0">
               {navigation.social.map((item) => (
                 <a
                   key={item.name}
@@ -190,7 +190,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-900/10 pt-8 sm:flex items-center justify-between">
           <p className="text-sm text-gray-600">
-            &copy; 2024 Iskcon Ramgarh, Inc. All rights reserved.
+            &copy; 2024 Vaishnavi&apos;s Classes, Inc. All rights reserved.
           </p>
           <p className="text-sm text-gray-600 mt-2 sm:mt-0">
             Built with ❤️ by{" "}

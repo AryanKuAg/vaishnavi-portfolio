@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Iskcon Ramgarh",
-  description: "Official Website of ISKCON Ramgarh 🌼",
+  title: "Vaishnavi's Portfolio",
+  description: "Vaishnavi's Portfolio 🌼",
 };
 
 export default function RootLayout({

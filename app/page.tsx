@@ -8,7 +8,7 @@ export default function Home() {
       <Header/>
       {/* <h1 className="text-4xl text-center py-28">🚧 Iskcon Ramgarh Work Under Construction</h1> */}
       {/* <Activities/> */}
-      <p className="text-center">🚧 Vaishnavi&apos;s Classes | Under Construction</p>
+      <p className="text-center text-4xl my-24">🚧 Vaishnavi&apos;s Classes | Under Construction</p>
       <Footer/>
     </div>
   );

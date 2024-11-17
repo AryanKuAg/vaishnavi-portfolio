@@ -7,11 +7,11 @@ import Link from 'next/link'
 import { FaBarsStaggered , FaXmark} from "react-icons/fa6";
 
 const navigation = [
-    { name: 'Gallary', href: '#' },
-    { name: 'Courses', href: '#' },
-  { name: 'Donation', href: '#' },
-  { name: 'Articles', href: '#' },
-  { name: 'Festivals', href: '#' },
+    { name: 'Home', href: '#' },
+    { name: 'Experience', href: '#' },
+  { name: 'Certificate', href: '#' },
+  { name: 'Testimonials', href: '#' },
+  { name: 'Contact me', href: '#' },
 ]
 
 export default function Header() {
