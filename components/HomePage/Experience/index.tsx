@@ -65,7 +65,7 @@ function classNames(...classes: string[]) {
 // 2023-2024Neetika and nimay
 export default function Experience() {
   return (
-    <div className="my-12">
+    <div className="my-12" id="experience">
          <div className="mx-auto max-w-2xl text-center">
         <h1 className="font-semibold tracking-tight text-gray-900 text-5xl sm:text-6xl">🧗‍♀️ My Experience</h1>
         <p className="mt-2 text-lg/8 text-gray-600">Discover my professional journey, highlighting the roles and responsibilities that shaped my expertise.</p>

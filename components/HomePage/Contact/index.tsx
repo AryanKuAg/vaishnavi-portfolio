@@ -42,10 +42,10 @@ ${firstName} ${lastName}
   }
 
   return (
-    <div className="isolate bg-white px-8">
-      <div
+    <div className="isolate bg-white px-8" id='contactme'>
+      {/* <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+        className="absolute inset-x-0 top-[-10rem] -z-50 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       >
         <div
           style={{
@@ -54,7 +54,7 @@ ${firstName} ${lastName}
           }}
           className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
         />
-      </div>
+      </div> */}
       <div className="mx-auto max-w-2xl text-center">
         <h1 className="font-semibold tracking-tight text-gray-900 text-5xl sm:text-6xl">📱 Contact me</h1>
         <p className="mt-2 text-lg/8 text-gray-600">Have questions or need assistance? Feel free to reach out—I&apos;m here to help!</p>

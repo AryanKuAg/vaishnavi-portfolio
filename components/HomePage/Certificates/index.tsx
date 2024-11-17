@@ -15,7 +15,7 @@ function classNames(...classes: string[]) {
 
 export default function Certificates() {
   return (
-    <div className='mt-32 mb-20'>
+    <div className='mt-32 mb-20' id='certificates'>
         <div className="mx-auto max-w-2xl text-center">
         <h1 className="font-semibold tracking-tight text-gray-900 text-5xl sm:text-6xl">📜 Certificates</h1>
         <p className="mt-2 text-lg/8 text-gray-600">Browse through my academic certificates that reflect my commitment to learning and excellence.</p>
