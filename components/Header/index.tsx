@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { FaBarsStaggered , FaXmark} from "react-icons/fa6";
 
 const navigation = [
-    // { name: 'Home', href: '#' },
+    { name: 'Demo', href: '#demo' },
     { name: 'Experience', href: '#experience' },
   { name: 'Certificate', href: '#certificates' },
   // { name: 'Testimonials', href: '#' },
